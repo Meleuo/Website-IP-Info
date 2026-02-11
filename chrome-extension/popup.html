@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="lib/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h3>Website IP Info</h3>
+  
+  <div class="tabs">
+    <button class="tab active" data-source="local">Local</button>
+    <button class="tab" data-source="alidns">AliDNS</button>
+    <button class="tab" data-source="google">Google</button>
+  </div>
+
+  <div id="loading">Loading data...</div>
+  <div id="error"></div>
+  
+  <div id="content">
+    <div class="info-row">
+      <span class="label">Domain:</span>
+      <span class="value" id="domain"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">IP:</span>
+      <span class="value" id="ip"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Country:</span>
+      <span class="value" id="country"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">City:</span>
+      <span class="value" id="city"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Timezone:</span>
+      <span class="value" id="timezone"></span>
+    </div>
+    <div class="info-row">
+      <span class="label">Coordinates:</span>
+      <span class="value" id="coords"></span>
+    </div>
+    
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <script src="lib/leaflet.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Site IP Info",
+  "version": "1.0",
+  "description": "Displays IP information for the current website using a local API.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "webRequest"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: https://*.openstreetmap.org https://flagcdn.com;"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Check Site IP"
+  }
+}
